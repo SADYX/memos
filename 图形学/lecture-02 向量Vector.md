@@ -34,17 +34,17 @@ norm = ![](https://latex.codecogs.com/svg.image?\sqrt{V_{1}^{2}&plus;V_{1}^{2}&p
 
 ![](https://latex.codecogs.com/svg.image?cos\theta=\hat{a}\cdot&space;\hat{b})  （这个公式也直观说明了为什么单位向量适合用于表达方向）
 
-###### *向量的点乘也符合交换律、结合律、分配律*
+#### *向量的点乘也符合交换律、结合律、分配律*
 
 ![](https://github.com/SADYX/memos/blob/master/assets/images/2023-03-18-13-38-37-image.png)
 
-###### *向量的点乘的计算方法*
+#### *向量的点乘的计算方法*
 
 同行元素相乘再相加
 
 ![](https://github.com/SADYX/memos/blob/master/assets/images/2023-03-18-13-43-32-image.png)
 
-###### *向量的点乘在图形学中的应用*
+#### *向量的点乘在图形学中的应用*
 
 1. 获取<mark>两个向量的夹角</mark>
 
@@ -54,11 +54,11 @@ norm = ![](https://latex.codecogs.com/svg.image?\sqrt{V_{1}^{2}&plus;V_{1}^{2}&p
 
 在三维几何中，向量a和向量b的外积结果是一个向量，有个更通俗易懂的叫法是<mark>法向量</mark>，该向量垂直于a和b向量构成的平面
 
-###### *二维平面中向量的叉乘的计算方法*
+#### *二维平面中向量的叉乘的计算方法*
 
 ![](https://latex.codecogs.com/svg.image?\overrightarrow{c}=\overrightarrow{a}\times&space;\overrightarrow{b}=\left\|\overrightarrow{a}&space;\right\|\left\|\overrightarrow{b}&space;\right\|sin\theta&space;)
 
-###### *三维空间中向量的叉乘的计算方法*
+#### *三维空间中向量的叉乘的计算方法*
 
 ![](https://github.com/SADYX/memos/blob/master/assets/images/2023-03-18-22-29-41-image.png)
 
@@ -66,15 +66,15 @@ norm = ![](https://latex.codecogs.com/svg.image?\sqrt{V_{1}^{2}&plus;V_{1}^{2}&p
 
 ![](https://github.com/SADYX/memos/blob/master/assets/images/2023-03-18-22-30-11-image.png)
 
-###### *向量的叉乘满足结合律和分配律，但是不满足交换律*
+#### *向量的叉乘满足结合律和分配律，但是不满足交换律*
 
 ![](https://github.com/SADYX/memos/blob/master/assets/images/2023-03-18-22-17-07-image.png)
 
-###### *叉乘的右手螺旋定则*
+#### *叉乘的右手螺旋定则*
 
 假设向量a叉乘向量b等于向量c，将除大拇指外的四指弯曲，弯曲方向为<mark>向量a旋转到向量b 的方向</mark>，此时大拇指的方向就是向量c的方向
 
-###### *向量的叉乘在图形学中的作用*
+#### *向量的叉乘在图形学中的作用*
 
 1. 已知向量a和向量b，则a和b的叉乘可以<mark>计算出垂直于a和b的新向量c</mark>
 
@@ -84,6 +84,6 @@ norm = ![](https://latex.codecogs.com/svg.image?\sqrt{V_{1}^{2}&plus;V_{1}^{2}&p
    
    一个由3个向量<mark>首尾相连</mark>构成的三角形和点P，计算AP×AB、BP×BC、CP×CA，若结果<mark>都为正</mark>（p在所有向量的右侧）或<mark>都为负</mark>（p在所有向量的左侧）则说明<mark>P在三角形内部</mark>；否则P在三角形的外部
 
-###### *附：为什么二维中叉乘的结果是一个实数而不是向量？*
+#### *附：为什么二维中叉乘的结果是一个实数而不是向量？*
 
 详情见 [二维向量的叉积是标量还是向量？ - RunningSnail - 博客园](https://www.cnblogs.com/tgycoder/p/4901600.html)
