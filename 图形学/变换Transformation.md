@@ -92,10 +92,6 @@
 
 用 roll、pitch、yaw 三个角度来描述旋转
 
-
-
-
-
 # 视图变换 View/Camera Transformation
 
 ---
@@ -110,25 +106,21 @@
 
 - 头顶的角度 Up direction （想象一下euler中的roll）
 
-
-
 ### 相机的变换
 
 我们总是把相机放在原点，并且以 Y 轴为up，看向 -Z 方向（约定俗成），这样做的好处是不用移动相机，只需要移动model就行（相对运动）
 
-![](https://github.com/SADYX/memos/blob/master/assets/images/2023-03-22-00-00-25-image.png)
-
-
+![](https://github.com/SADYX/memos/blob/master/assets/images/2023-03-21-23-58-32-image.png)
 
 ### 相机从空间中任意一点转化到原点的矩阵计算
 
 例如有如下相机
 
-![]()
+![](https://github.com/SADYX/memos/blob/master/assets/images/2023-03-22-00-00-25-image.png)
 
 把它转到
 
-![](https://github.com/SADYX/memos/blob/master/assets/images/2023-03-22-00-00-25-image.png)
+![](https://github.com/SADYX/memos/blob/master/assets/images/2023-03-21-23-58-32-image.png)
 
 这样的位置，需要做的有以下几步
 
@@ -140,11 +132,7 @@
 
 4. 旋转 向量 g × t 到 X 轴
 
-
-
 ![](https://github.com/SADYX/memos/blob/master/assets/images/2023-03-21-23-59-37-image.png)
-
- 
 
 先平移再旋转，但是旋转的这一步很复杂，我们可以换种思路：
 
