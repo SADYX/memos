@@ -71,3 +71,89 @@
 而是
 
 ![](https://github.com/SADYX/memos/blob/master/assets/images/svg7.svg)
+
+# 
+
+# 三维变换
+
+---
+
+### 绕X,Y,Z轴旋转的公式
+
+![](https://github.com/SADYX/memos/blob/master/assets/images/2023-03-21-22-28-57-image.png)
+
+> 为什么绕y轴旋转的公式中-sinα在左下角？因为三个basis应该依次叉乘以得到坐标系（X-Y-Z-X-Y-Z...），所以绕Y轴旋转的平面是ZOX而不是XOZ（详情见[旋转矩阵](https://blog.csdn.net/csxiaoshui/article/details/65446125)）
+
+### 
+
+### 欧拉角 Euler
+
+![](https://github.com/SADYX/memos/blob/master/assets/images/2023-03-21-23-22-54-image.png)
+
+用 roll、pitch、yaw 三个角度来描述旋转
+
+
+
+
+
+# 视图变换 View/Camera Transformation
+
+---
+
+### 如何定义一个相机
+
+想象一下为一个模特拍照，需要先把相机放在合适的地点，然后把相机看向模特，最后旋转手机找到正确的角度。所以得到了这三点
+
+- 位置 Position
+
+- 注视的方向 Look-at / gaze direction
+
+- 头顶的角度 Up direction （想象一下euler中的roll）
+
+
+
+### 相机的变换
+
+我们总是把相机放在原点，并且以 Y 轴为up，看向 -Z 方向（约定俗成），这样做的好处是不用移动相机，只需要移动model就行（相对运动）
+
+![](https://github.com/SADYX/memos/blob/master/assets/images/2023-03-22-00-00-25-image.png)
+
+
+
+### 相机从空间中任意一点转化到原点的矩阵计算
+
+例如有如下相机
+
+![]()
+
+把它转到
+
+![](https://github.com/SADYX/memos/blob/master/assets/images/2023-03-22-00-00-25-image.png)
+
+这样的位置，需要做的有以下几步
+
+1. 将 e 放到原点
+
+2. 旋转 向量 g 到 -Z 轴
+
+3. 旋转 向量 t 到 Y 轴
+
+4. 旋转 向量 g × t 到 X 轴
+
+
+
+![](https://github.com/SADYX/memos/blob/master/assets/images/2023-03-21-23-59-37-image.png)
+
+ 
+
+先平移再旋转，但是旋转的这一步很复杂，我们可以换种思路：
+
+1. 旋转 X 轴 到 向量 g × t
+
+2. 旋转 Y 轴 到 向量 t
+
+3. 旋转 Z 轴 到 向量 -g
+
+然后再进行转置transpose就可以得到结果
+
+> 因为旋转矩阵是正交矩阵，逆矩阵即为转置矩阵
