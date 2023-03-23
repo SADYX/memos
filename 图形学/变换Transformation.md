@@ -145,3 +145,17 @@
 然后再进行转置transpose就可以得到结果
 
 > 因为旋转矩阵是正交矩阵，逆矩阵即为转置矩阵
+
+# 投影变换 Projection Transformation
+
+---
+
+### 正交投影 Orthographic Projection
+
+![](https://github.com/SADYX/memos/blob/master/assets/images/2023-03-23-21-59-08-image.png)
+
+> 可以理解成透视投影的相机无限远，视椎体近似长方体
+
+### 透视投影 Perspective Projection
+
+![](https://github.com/SADYX/memos/blob/master/assets/images/2023-03-23-21-59-41-image.png)
